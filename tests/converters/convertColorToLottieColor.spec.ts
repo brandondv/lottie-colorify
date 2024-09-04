@@ -48,4 +48,14 @@ describe('convertColorToLottieColor', () => {
   it('should throw an error if the color is not defined', () => {
     expect(() => convertColorToLottieColor()).toThrow('Color not defined');
   });
+
+  it('should throw an error if the color is not defined', () => {
+    expect(() => convertColorToLottieColor({} as Color)).toThrow(
+      'Color can be only hex or rgb(a) array (ex. [10,20,30,1])',
+    );
+  });
+
+  it('should throw an error if the color is not a proper HEX', () => {
+    expect(() => convertColorToLottieColor('test123' as Color)).toThrow('Color does not match hex format');
+  });
 });
