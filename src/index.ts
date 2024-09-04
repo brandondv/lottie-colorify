@@ -11,11 +11,13 @@ import { flatten } from './modifiers/flatten';
 import { modifyColors } from './modifiers/modifyColors';
 import { replaceColor } from './modifiers/replaceColor';
 import { replaceColors } from './modifiers/replaceColors';
+import { replaceColorsLoop } from './modifiers/replaceColorsLoop';
 
 export {
   colorify,
   replaceColor,
   replaceColors,
+  replaceColorsLoop,
   modifyColors,
   getColors,
   getUniqueColors,

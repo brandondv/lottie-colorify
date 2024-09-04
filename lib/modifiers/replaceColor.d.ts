@@ -5,7 +5,7 @@ import { Color, LottieObject } from '../types';
  * @param sourceColor
  * @param targetColor
  * @param lottieObject
- * @param immutable
+ * @param immutable makes a deep copy of the lottieObject if true
  * @returns lottieObject
  */
 export declare const replaceColor: (
