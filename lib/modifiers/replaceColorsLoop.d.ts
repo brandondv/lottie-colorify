@@ -6,8 +6,4 @@ import { Color, LottieObject } from '../types';
  * @param lottieObject
  * @returns LottieObject
  */
-export declare const replaceColorsLoop: (
-  sourceColors: Color[],
-  targetColors: Color[],
-  lottieObject: LottieObject,
-) => any;
+export declare const replaceColorsLoop: (sourceColors: Color[], targetColors: Color[], lottieObject: LottieObject) => any;

@@ -8,9 +8,4 @@ import { Color, LottieObject } from '../types';
  * @param immutable makes a deep copy of the lottieObject if true
  * @returns lottieObject
  */
-export declare const replaceColor: (
-  sourceColor: Color,
-  targetColor: Color,
-  lottieObject: LottieObject,
-  immutable?: boolean,
-) => LottieObject;
+export declare const replaceColor: (sourceColor: Color, targetColor: Color, lottieObject: LottieObject, immutable?: boolean) => LottieObject;

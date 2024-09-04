@@ -6,8 +6,4 @@ import { LottieColor, LottieObject } from '../types';
  * @param immutable makes a deep copy of the lottieObject if true
  * @returns LottieObject
  */
-export declare const modifyColors: (
-  colorsArray: LottieColor[],
-  lottieObject: LottieObject,
-  immutable?: boolean,
-) => LottieObject;
+export declare const modifyColors: (colorsArray: LottieColor[], lottieObject: LottieObject, immutable?: boolean) => LottieObject;
