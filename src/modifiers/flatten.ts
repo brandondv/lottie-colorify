@@ -1,4 +1,3 @@
-import cloneDeep from 'lodash.clonedeep';
 import { convertColorToLottieColor } from '../converters/convertColorToLottieColor';
 import { Color, LottieObject, LottieColor } from '../types';
 
@@ -33,5 +32,5 @@ export const flatten = (targetColor: Color, lottieObject: LottieObject, immutabl
 
     return innerObject;
   }
-  return doFlatten(genTargetLottieColor, immutable ? cloneDeep(lottieObject) : lottieObject);
+  return doFlatten(genTargetLottieColor, immutable ? structuredClone(lottieObject) : lottieObject);
 };

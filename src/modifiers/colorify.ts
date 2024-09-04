@@ -1,4 +1,3 @@
-import cloneDeep from 'lodash.clonedeep';
 import { convertColorToLottieColor } from '../converters/convertColorToLottieColor';
 import { LottieObject, LottieColor, Color } from '../types';
 import { modifyColors } from './modifyColors';
@@ -17,5 +16,5 @@ export const colorify = (colorsArray: Color[] = [], lottieObject: LottieObject, 
     modifiedColors.push(convertColorToLottieColor(color));
   });
 
-  return modifyColors(modifiedColors, immutable ? cloneDeep(lottieObject) : lottieObject);
+  return modifyColors(modifiedColors, immutable ? structuredClone(lottieObject) : lottieObject);
 };

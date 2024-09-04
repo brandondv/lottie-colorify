@@ -1,4 +1,3 @@
-import cloneDeep from 'lodash/clonedeep';
 import { LottieColor, LottieObject } from '../types';
 
 /**
@@ -40,5 +39,5 @@ export const modifyColors = (
     return innerObject;
   }
 
-  return doModify(colorsArray, immutable ? cloneDeep(lottieObject) : lottieObject);
+  return doModify(colorsArray, immutable ? structuredClone(lottieObject) : lottieObject);
 };

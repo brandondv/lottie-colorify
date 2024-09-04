@@ -1,7 +1,6 @@
 import { round, faultMargin } from '../basics';
 import { convertColorToLottieColor } from '../converters/convertColorToLottieColor';
 import { Color, LottieObject, LottieColor } from '../types';
-import cloneDeep from 'lodash.clonedeep';
 
 /**
  * Replace all occurrences of sourceColor with targetColor in a lottie object.
@@ -70,5 +69,5 @@ export const replaceColor = (
     return innerObject;
   }
 
-  return doReplace(genSourceLottieColor, genTargetLottieColor, immutable ? cloneDeep(lottieObject) : lottieObject);
+  return doReplace(genSourceLottieColor, genTargetLottieColor, immutable ? structuredClone(lottieObject) : lottieObject);
 };
