@@ -69,5 +69,9 @@ export const replaceColor = (
     return innerObject;
   }
 
-  return doReplace(genSourceLottieColor, genTargetLottieColor, immutable ? structuredClone(lottieObject) : lottieObject);
+  return doReplace(
+    genSourceLottieColor,
+    genTargetLottieColor,
+    immutable ? structuredClone(lottieObject) : lottieObject,
+  );
 };

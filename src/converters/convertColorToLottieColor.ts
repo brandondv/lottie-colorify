@@ -6,10 +6,10 @@ import { Color, LottieColor } from '../types';
  * @returns lottie color array with alpha channel
  */
 export const convertColorToLottieColor = (color?: Color): LottieColor => {
-  if (typeof color === 'string' && color.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i)) {
+  if (typeof color === 'string') {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
     if (!result) {
-      throw new Error('Color can be only hex or rgb array (ex. [10,20,30])');
+      throw new Error('Color does not match hex format');
     }
     return [
       Math.round((parseInt(result[1], 16) / 255) * 1000) / 1000,
