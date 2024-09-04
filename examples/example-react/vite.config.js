@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      // eslint-disable-next-line no-undef
       'lottie-colorify': resolve(__dirname, '../../lib/index.mjs'),
     },
   },
