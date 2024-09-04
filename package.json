@@ -25,7 +25,9 @@
     "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "files": [
     "lib/**/*"
@@ -36,7 +38,8 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.3",
-    "vite-plugin-dts": "^4.1.0"
+    "vite-plugin-dts": "^4.1.0",
+    "vitest": "2.0.5"
   },
   "dependencies": {
     "@types/lodash.clonedeep": "^4.5.6",
